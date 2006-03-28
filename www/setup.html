@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- don't edit start -->
+<head>
+<title>Seasar - DI Container with AOP - </title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link href="seasar_b.css" type="text/css" rel="stylesheet" media="screen">
+<link href="seasar_p.css" type="text/css" rel="stylesheet" media="print">
+<script src="seasar_b.js" type="text/JavaScript" language="JavaScript"></script>
+</head><body onload="preload('ja')"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="left"><tr>
+<td align="left" valign="top" width="780"><table width="780" border="0" cellspacing="0" cellpadding="0" class="white">
+<tr><td colspan="7"><img height="5" width="780" src="images/top01_b.gif" alt=""></td></tr>
+<tr><td><img height="117" width="235" src="images/top02_b.gif" alt="Seasar"></td>
+<td colspan="3"><img height="117" width="289" src="images/top03.gif" alt="DI Container with AOP"></td>
+<td colspan="3"><img height="117" width="256" src="images/spacer.gif" alt=""></td>
+</tr><tr><td rowspan="2"><img src="images/top04.gif" alt="" height="49" width="235"></td>
+<td><a href="http://www.seasar.org/index.html"><img src="images/menu01_b_ja.gif" height="30" width="78" border="0" alt="" id="menu01" onmouseover="swap(1)" onmouseout="restore(1)"></a></td>
+<td><a href="http://www.seasar.org/projects.html"><img src="images/menu02_b_ja.gif" height="30" width="101" border="0" alt="" id="menu02" onmouseover="swap(2)" onmouseout="restore(2)"></a></td>
+<td><a href="http://www.seasar.org/products.html"><img src="images/menu03_b_ja.gif" height="30" width="110" border="0" alt="" id="menu03" onmouseover="swap(3)" onmouseout="restore(3)"></a></td>
+<td><a href="http://www.seasar.org/resources.html"><img src="images/menu04_b_ja.gif" height="30" width="113" border="0" alt="" id="menu04" onmouseover="swap(4)" onmouseout="restore(4)"></a></td>
+<td><img src="images/menu05_b_ja.gif" height="30" width="109" border="0" alt="" id="menu05" onmouseover="swap(5)" onmouseout="restore(5)"></td>
+<td><img height="30" width="34" src="images/menu06.gif" alt=""></td></tr><tr>
+<td colspan="6"><img height="19" width="545" src="images/spacer.gif" alt=""></td></tr></table>
+<table  width="780" border="0" cellspacing="0" cellpadding="0" class="white">
+<tr align="left" valign="top"><td width="14"><img height="14" width="14" src="images/spacer.gif" alt=""></td><td width="740" class="main">
+<!-- don't edit end -->
+<!-- document start -->
+<br>
+<h1><a name="setup">S2Remoting セットアップ</a></h1>
+<p>本ドキュメントは<code>S2Remoting-V1.0.0a</code>について記述しています．旧バージョンについては該当バージョンの配布ファイルに含まれているドキュメントを参照してください．</p>
+
+<h2><a name="cot">目次</a></h2>
+<ul>
+<li><a href="#requirement">前提条件</a>
+<li><a href="#downlod">ダウンロード</a>
+<li><a href="#install">インストール</a>
+</ul>
+
+<h2><a name="requirement">前提条件</a></h2>
+<table border="1">
+<col span="2" width="150">
+<tbody>
+<tr>
+<th>S2Remoting</th>
+<th>S2</th>
+</tr>
+<tr>
+<td>1.0.0a</td>
+<td>2.1.11～</td>
+</tr>
+<tr>
+<td>1.0.0</td>
+<td>2.1.11～</td>
+</tr>
+</tbody>
+</table>
+
+<h3>実行環境</h3>
+<p>S2Remotingを実行するには，以下のものが必要です．</p>
+<ul>
+<li>JDK (J2SE SDK) 1.4以降が必要です．S2Remoting-V1.0.0aの開発とテストはJDK
+1.4.2_08で行っています．ダウンロードは<a href="http://java.sun.com/j2se/1.4.2/ja/download.html">こちら</a>．
+<li>S2の2.1以降が必要です．S2Remoting-V1.0.0aの開発とテストはS2.3.7で行っています．ダウンロードは<a href="http://s2container.seasar.org/ja/">こちら</a>．
+</ul>
+<h3>開発環境</h3>
+<p>S2Remotingのディストリビューションは，他のS2関連プロダクトの多くと同様，Eclipse
+Javaプロジェクトをアーカイブしたものとなっています．</p>
+<ul>
+<li>Eclipse3.0以降が必要です．S2Remoting-V1.0.0aの開発とテストは，Eclipse3.1.2で行っています．ダウンロードは<a href="http://www.eclipse.org/downloads/index.php">こちら</a>．
+<li>S2の2.1以降が必要です．S2Remoting-V1.0.0aの開発とテストはS2.3.7で行っています．ダウンロードは<a href="http://s2container.seasar.org/ja/">こちら</a>．
+</ul>
+
+<h2><a name="downlod">ダウンロード</a></h2>
+<p>S2Remotingは<a href="http://s2remoting.seasar.org/ja/">こちら</a>からダウンロードすることが出来ます．</p>
+
+<h2><a name="install">インストール</a></h2>
+あらかじめS2がEclipseワークスペースにインポートされている必要があります．
+<ul>
+<li>ダウンロードした<code>S2Remoting-V1.0.0a.zip</code>ファイルを適当なディレクトリに解凍してください．
+<li>Eclipseを起動し，「ファイル」－「インポート」メニューを選択してください．
+<li>「インポート」ウィザードで「既存プロジェクトをワークスペースへ」を選択し，「次へ」をクリックしてください．
+<li>「参照」ボタンをクリックし，先に解凍したディレクトリに出来ている<code>s2remoting</code>ディレクトリを選択し，「OK」ボタンをクリックします．
+<li>「終了」ボタンをクリックします．
+</ul>
+
+<!-- document end -->
+<!-- don't edit start -->
+</td>
+<td width="14"><img height="14" width="14" src="images/spacer.gif" alt=""></td>
+</tr><tr>
+<td width="14"><img height="30" width="14" src="images/spacer.gif" alt=""></td>
+<td width="766"><img height="30" width="592" src="images/spacer.gif" alt=""></td>
+</tr><tr>
+<td width="14"><img height="14" width="14" src="images/spacer.gif" alt=""></td>
+<td width="766" class="copyright">&copy; Copyright The Seasar Foundation and the others 2004, all rights reserved.</td>
+</tr></table>
+<td class="backright" align="left" valign="top">&nbsp;</td></tr><tr>
+<td class="backunder" align="left"  valign="top" width="780" height="16">&nbsp;</td>
+<td class="backcorner" align="left" valign="top" height="16">&nbsp;</td>
+</tr></table></body>
+<!-- don't edit end -->
+</html>
