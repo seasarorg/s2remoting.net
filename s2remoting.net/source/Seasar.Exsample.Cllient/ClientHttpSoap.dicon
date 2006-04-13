@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components>
+	
+	<component name="httpChannel" class="System.Runtime.Remoting.Channels.Http.HttpChannel">
+		<arg>
+			<component name="channelProperties" class="System.Collections.Specialized.ListDictionary" />
+		</arg>
+		<arg>
+			<component class="System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />
+		</arg>
+		<arg>
+			<component class="System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider" />
+		</arg>
+	</component>
+
+	<component name="testURI" class="System.Uri">
+		<arg>"http://localhost:8000/"</arg>
+	</component>
+
+	<component name="dnrConnector" class="Seasar.Remoting.DotNetRemoting.Connector.DnrConnector">
+		<property name="baseURL">testURI</property>
+		<property name="Channel">httpChannel</property>
+		<initMethod name="Lookup"/>
+	</component>
+
+	<component name="remoting" class="Seasar.Remoting.Common.Interceptor.RemotingInterceptor">
+		<property name="Connector">dnrConnector</property>
+	</component>
+
+</components>

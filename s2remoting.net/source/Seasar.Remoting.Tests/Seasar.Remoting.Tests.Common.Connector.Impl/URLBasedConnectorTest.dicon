@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"http://www.seasar.org/dtd/components21.dtd">
+<components >
+<!--
+	<component name="localURL" class="System.Uri">
+		<arg>"http://localhost/path"</arg>
+	</component>
+-->
+	<component class="Seasar.Remoting.Tests.Common.Connector.Impl.TestConnector">
+		<property name="baseURL">
+			<component class="System.Uri">
+				<arg>"http://localhost/path"</arg>
+			</component>
+		</property>
+	</component>
+
+</components>

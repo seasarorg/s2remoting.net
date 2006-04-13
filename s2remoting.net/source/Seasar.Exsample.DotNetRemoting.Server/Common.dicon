@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components >
+
+	<component name="traceInterceptor" class="Seasar.Framework.Aop.Interceptors.TraceInterceptor"/>
+
+	<component name="dnrAdapptor" class="Seasar.Remoting.DotNetRemoting.Adaptor.DnrAdaptor" />
+
+</components>

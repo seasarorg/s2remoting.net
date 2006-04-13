@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components>
+
+	<component name="traceInterceptor" class="Seasar.Framework.Aop.Interceptors.TraceInterceptor"/>
+
+	<component name="testURI" class="System.Uri">
+		<arg>"tcp://localhost:8000/"</arg>
+	</component>
+
+	<component name="dnrConnector" class="Seasar.Remoting.DotNetRemoting.Connector.DnrConnector">
+		<property name="baseURL">testURI</property>
+	</component>
+
+	<component name="dnrAdapptor" class="Seasar.Remoting.DotNetRemoting.Adaptor.DnrAdaptor">
+		<property name="Invoker">
+			<component class="Seasar.Extension.Component.Impl.ComponentInvoker"/>
+		</property>
+	</component>
+
+</components>

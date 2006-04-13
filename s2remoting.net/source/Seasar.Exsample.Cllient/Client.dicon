@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components>
+
+  <component name="tcpChannel" class="System.Runtime.Remoting.Channels.Tcp.TcpChannel" />
+
+  <component name="testURI" class="System.Uri">
+    <arg>"tcp://localhost:8000/"</arg>
+  </component>
+
+  <component name="dnrConnector" class="Seasar.Remoting.DotNetRemoting.Connector.DnrConnector">
+    <property name="baseURL">testURI</property>
+    <property name="Channel">tcpChannel</property>
+    <initMethod name="Lookup"/>
+  </component>
+
+  <component name="remoting" class="Seasar.Remoting.Common.Interceptor.RemotingInterceptor">
+    <property name="Connector">dnrConnector</property>
+  </component>
+
+</components>

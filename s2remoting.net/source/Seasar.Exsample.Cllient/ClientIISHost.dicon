@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components>
+	
+	<component name="testURI" class="System.Uri">
+		<!--<arg>"http://localhost/iishost/DNRAdaptor.rem"</arg>-->
+    <arg>"http://localhost:1349/Seasar.Exsample.DotNetRemoting.IISHost/DNRAdaptor.rem"</arg>
+	</component>
+
+	<component name="dnrConnector" class="Seasar.Remoting.DotNetRemoting.Connector.DnrConnector">
+		<property name="baseURL">testURI</property>
+		<initMethod name="LookupForIISHost"/>
+	</component>
+
+	<component name="remoting" class="Seasar.Remoting.Common.Interceptor.RemotingInterceptor">
+		<property name="Connector">dnrConnector</property>
+	</component>
+
+</components>

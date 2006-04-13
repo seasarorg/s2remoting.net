@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components namespace="IISHost">
+	
+	<include path ="Common.dicon" />
+
+	<component name="componentInvoker" class="Seasar.Extension.Component.Impl.ComponentInvoker"/>
+
+	<component name="hello" class="Seasar.Exsample.Service.Hello">
+		<aspect pointcut="Say">
+			traceInterceptor
+		</aspect>
+	</component>
+
+	<component name="foo" class="Seasar.Exsample.Service.Foo">
+		<aspect pointcut="Bar">
+			traceInterceptor
+		</aspect>
+	</component>
+
+</components>

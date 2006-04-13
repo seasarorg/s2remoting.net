@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components namespace="IISHost">
+
+	<include path ="Common.dicon" />
+	<include path ="Components.dicon" />
+	
+	<component class="Seasar.Remoting.DotNetRemoting.Deployer.DnrAdaptorDeployer">
+		<property name="Adaptor">dnrAdapptor</property>
+		<property name="WellKnownObjectMode">System.Runtime.Remoting.WellKnownObjectMode.SingleCall</property>
+	    <initMethod name="RegisterWellKnownServiceType"/>
+		<aspect>traceInterceptor</aspect>
+	</component>
+
+</components>

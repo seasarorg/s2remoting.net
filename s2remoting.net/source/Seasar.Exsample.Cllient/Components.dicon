@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components >
+	
+	<include path ="Common.dicon" />
+	<include path ="Client.dicon" />
+
+	<component name="hello" class="Seasar.Exsample.Service.IHello">
+		<aspect pointcut="Say">
+			traceInterceptor
+		</aspect>
+		<aspect>remoting</aspect>
+	</component>
+
+	<component name="foo" class="Seasar.Exsample.Service.Foo">
+		<aspect pointcut="Bar">
+			traceInterceptor
+		</aspect>
+		<aspect>remoting</aspect>
+	</component>
+
+</components>

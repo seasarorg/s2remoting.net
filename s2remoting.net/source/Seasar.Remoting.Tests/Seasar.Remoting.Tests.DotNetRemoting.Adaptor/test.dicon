@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+<components>
+
+	<component name="traceInterceptor" class="Seasar.Framework.Aop.Interceptors.TraceInterceptor"/>
+	
+	<component name="componentInvoker" class="Seasar.Extension.Component.Impl.ComponentInvoker"/>
+
+	<component name="dnrAdapptor" class="Seasar.Remoting.DotNetRemoting.Adaptor.DnrAdaptor" />
+
+	<component name="mockInterceptor" class="Seasar.Framework.Aop.Interceptors.MockInterceptor">
+		<initMethod name="SetReturnValue">
+			<arg>"Say"</arg>
+			<arg>"Hello!"</arg>
+		</initMethod>
+	</component>
+    
+	<component name="hello" class="Seasar.Remoting.Tests.DotNetRemoting.Adaptor.IHello">
+		<aspect>mockInterceptor</aspect>
+	</component>
+  
+	<component name="hello2" class="Seasar.Remoting.Tests.DotNetRemoting.Adaptor.IHello">
+		<aspect>mockInterceptor</aspect>
+	</component>
+
+	<component name="hello2" class="Seasar.Remoting.Tests.DotNetRemoting.Adaptor.IHello">
+		<aspect>mockInterceptor</aspect>
+	</component>
+
+</components>

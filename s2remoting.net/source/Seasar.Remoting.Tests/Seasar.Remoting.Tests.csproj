@@ -1,0 +1,161 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C90A7697-3640-4003-9440-D2D8303D7690}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Seasar.Tests.Remoting</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <Name>log4net</Name>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MbUnit.Framework">
+      <Name>MbUnit.Framework</Name>
+      <HintPath>..\..\lib\MbUnit.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar">
+      <Name>Seasar</Name>
+      <HintPath>..\..\lib\Seasar.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <Name>Seasar.Unit</Name>
+      <HintPath>..\..\lib\Seasar.Unit.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Seasar.Remoting\Seasar.Remoting.csproj">
+      <Name>Seasar.Remoting</Name>
+      <Project>{C296438F-52B6-44F7-A18A-AC7407C47849}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="test.dicon" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.Common.Connector.Impl\TargetSpecificURLBasedConnectorTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.Common.Connector.Impl\TestConnector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.Common.Connector.Impl\URLBasedConnectorTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.Common.Interceptor\RemotingInterceptorTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.Common.Interceptor\TestClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.DotNetRemoting.Adaptor\DnrAdaptorTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.DotNetRemoting.Adaptor\IHello.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.DotNetRemoting.Connector\DnrConnectorTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seasar.Remoting.Tests.DotNetRemoting.Deployer\DnrAdaptorDeployerTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Seasar.Remoting.Tests.Common.Connector.Impl\URLBasedConnectorTest.dicon" />
+    <EmbeddedResource Include="Seasar.Remoting.Tests.Common.Interceptor\RemotingInterceptorTest.dicon" />
+    <EmbeddedResource Include="Seasar.Remoting.Tests.DotNetRemoting.Adaptor\test.dicon" />
+    <EmbeddedResource Include="Seasar.Remoting.Tests.DotNetRemoting.Connector\test.dicon" />
+    <EmbeddedResource Include="Seasar.Remoting.Tests.DotNetRemoting.Deployer\test.dicon" />
+    <EmbeddedResource Include="Seasar.Remoting.Tests.DotNetRemoting.Deployer\test2.dicon" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>copy "$(ProjectDir)App.config" "$(TargetPath).config"
+copy "$(ProjectDir)test.dicon" "$(TargetDir)test.dicon"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
