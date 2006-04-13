@@ -107,11 +107,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App.config" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <EmbeddedResource Include="Common.dicon" />
     <EmbeddedResource Include="Components.dicon" />
     <EmbeddedResource Include="Server.dicon" />
-    <None Include="App.dicon" />
+    <None Include="App.dicon">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ServerHttpBinary.dicon" />
     <None Include="ServerHttpSoap.dicon" />
     <None Include="ServerTcp.dicon" />
